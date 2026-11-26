@@ -93,6 +93,7 @@ exclude:
   - Capfile
   - config
   - Dockerfile
+  - docker-compose.yaml
   - files
   - Gemfile
   - Gruntfile.js
@@ -100,10 +101,17 @@ exclude:
   - LICENSE
   - local
   - log
+  - markdown_generator
   - node_modules
   - package.json*
   - Rakefile
   - README
+  - scripts
+  - talkmap
+  - talkmap.ipynb
+  - talkmap.py
+  - talkmap_out.ipynb
+  - AGENTS.md
   - tmp
   - vendor
   - _pages/archive-layout-with-content.md
