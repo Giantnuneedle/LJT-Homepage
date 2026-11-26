@@ -73,7 +73,6 @@ analytics:
 include:
   - .htaccess
   - _pages
-  - files
 
 exclude:
   - "*.sublime-project"
@@ -83,6 +82,10 @@ exclude:
   - .github
   - .jekyll-assets-cache
   - .sass-cache
+  - _posts
+  - _portfolio
+  - _talks
+  - _teaching
   - assets/js/_main.js
   - assets/js/plugins
   - assets/js/vendor
@@ -90,6 +93,7 @@ exclude:
   - Capfile
   - config
   - Dockerfile
+  - files
   - Gemfile
   - Gruntfile.js
   - gulpfile.js
@@ -102,6 +106,20 @@ exclude:
   - README
   - tmp
   - vendor
+  - _pages/archive-layout-with-content.md
+  - _pages/category-archive.html
+  - _pages/collection-archive.html
+  - _pages/markdown.md
+  - _pages/non-menu-page.md
+  - _pages/page-archive.html
+  - _pages/portfolio.html
+  - _pages/sitemap.md
+  - _pages/tag-archive.html
+  - _pages/talkmap.html
+  - _pages/talks.html
+  - _pages/teaching.html
+  - _pages/terms.md
+  - _pages/year-archive.html
 
 keep_files:
   - .git
@@ -129,16 +147,16 @@ kramdown:
 
 collections:
   teaching:
-    output: true
+    output: false
     permalink: /:collection/:path/
   publications:
     output: false
     permalink: /:collection/:path/
   portfolio:
-    output: true
+    output: false
     permalink: /:collection/:path/
   talks:
-    output: true
+    output: false
     permalink: /:collection/:path/
 
 defaults:
