@@ -52,12 +52,12 @@ First-year PhD candidate at HKUST NLP Group.
 
 ## Publications
 
-{% assign cv_publications = site.publications | sort: 'display_order' %}
-<ol>
-{% for publication in cv_publications %}
-  <li>{{ publication.citation | markdownify }}</li>
-{% endfor %}
-</ol>
+1. Junteng Liu, Yuanxiang Fan, Zhuo Jiang, Han Ding, Yongyi Hu, Chi Zhang, Yiqi Shi, Shitong Weng, Aili Chen, Shiqi Chen, Yunan Huang, Mozhi Zhang, Pengyu Zhao, Junjie Yan, Junxian He. **SynLogic: Synthesizing Verifiable Reasoning Data at Scale for Learning Logical Reasoning and Beyond.** Published on Arxiv (2025). First author. GitHub code repository available.
+2. Junteng Liu, Weihao Zeng, Xiwen Zhang, Yijun Wang, Zifei Shan, Junxian He. **On the Perception Bottleneck of VLMs for Chart Understanding.** Published on Arxiv (2025). First author. GitHub code repository: Vision4Chart.
+3. Junteng Liu, Shiqi Chen, Yu Cheng, Junxian He. **On the Universal Truthfulness Hyperplane Inside LLMs.** Published at EMNLP 2024, the Conference on Empirical Methods in Natural Language Processing. First author. GitHub code repository: Universal_Truthfulness_Hyperplane.
+4. Shiqi Chen, Miao Xiong, Junteng Liu, Zhengxuan Wu, Teng Xiao, Siyang Gao, Junxian He. **In-Context Sharpness as Alerts: An Inner Representation Perspective for Hallucination Mitigation.** Published at ICML 2024, the International Conference on Machine Learning. Co-author.
+5. Yuzhen Huang, Yuzhuo Bai, Zhihao Zhu, Junlei Zhang, Jinghan Zhang, Tangjun Su, Junteng Liu, Chuancheng Lv, Yikai Zhang, Jiayi Lei, Yao Fu, Maosong Sun, Junxian He. **C-Eval: A Multi-Level Multi-Discipline Chinese Evaluation Suite for Foundation Models.** Published at NeurIPS 2023, the Neural Information Processing Systems. Co-author.
+6. Jinghan Zhang, Shiqi Chen, Junteng Liu, Junxian He. **Composing Parameter-Efficient Modules with Arithmetic Operations.** Published at NeurIPS 2023, the Neural Information Processing Systems. Co-author.
 
 ## Contact
 
