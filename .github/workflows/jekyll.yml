@@ -18,6 +18,8 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      pages_enabled: ${{ steps.pages.outcome == 'success' }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -39,17 +41,48 @@ jobs:
           ruby-version: '3.1'
           bundler-cache: true
 
-      - name: Configure GitHub Pages
+      - name: Check GitHub Pages configuration
         id: pages
         continue-on-error: true
         uses: actions/configure-pages@v5
         with:
-          enablement: true
+          enablement: false
 
       - name: Build with Jekyll
         run: bundle exec jekyll build
         env:
           JEKYLL_ENV: production
+
+      - name: Verify required homepage content
+        run: |
+          set -euo pipefail
+          test -f _site/index.html
+          test -f _site/publications/index.html
+          test -f _site/cv/index.html
+          for term in \
+            "First-year PhD candidate" \
+            "Shanghai Jiao Tong University" \
+            "MINIMAX" \
+            "Tencent WXG" \
+            "Shanghai AI Lab" \
+            "Zhiyuan Honor Scholarship" \
+            "SynLogic" \
+            "Vision4Chart" \
+            "Universal_Truthfulness_Hyperplane" \
+            "C-Eval" \
+            "Composing Parameter-Efficient Modules with Arithmetic Operations" \
+            "jliugi@connect.ust.hk" \
+            "Vicent0205" \
+            "tbK9jl4AAAAJ" \
+            "junteng88716710"; do
+            grep -q "$term" _site/index.html
+          done
+          for publication in SynLogic "Perception Bottleneck" "Universal Truthfulness Hyperplane" "In-Context Sharpness" C-Eval "Composing Parameter-Efficient Modules"; do
+            grep -q "$publication" _site/publications/index.html
+            grep -q "$publication" _site/cv/index.html
+          done
+          echo "Generated top-level pages:"
+          find _site -maxdepth 2 -name index.html | sort
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -58,7 +91,7 @@ jobs:
 
   deploy:
     needs: build
-    if: ${{ always() && needs.build.result == 'success' }}
+    if: ${{ needs.build.outputs.pages_enabled == 'true' }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
