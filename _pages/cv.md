@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "CV"
+title: 'CV'
 permalink: /cv/
 author_profile: true
 redirect_from:
@@ -9,56 +9,59 @@ redirect_from:
 
 {% include base_path %}
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+# Junteng Liu
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+First-year PhD candidate at HKUST NLP Group.
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+## Personal Details
 
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+- Name: Junteng Liu
+- Current status: First-year PhD candidate at HKUST NLP Group
+- Academic affiliation: Hong Kong University of Science and Technology
+- Email: [jliugi@connect.ust.hk](mailto:jliugi@connect.ust.hk)
+- GitHub: [https://github.com/Vicent0205](https://github.com/Vicent0205)
+- Google Scholar: [https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate)
+- X (Twitter): [@junteng88716710](https://twitter.com/junteng88716710)
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+## Education
+
+- **Ph.D. in Computer Science (2024-Present)**, Hong Kong University of Science and Technology.
+  - HKUST NLP Group.
+  - Ph.D. supervisor: Professor Junxian He, who previously advised Junteng Liu during undergraduate studies at SJTU.
+- **B.Eng. (2020-2024)**, Shanghai Jiao Tong University. Graduated in June 2024.
+
+## Research Experience
+
+- **Research Intern, MINIMAX** (February 2025 - Present)
+- **Research Intern, Tencent WXG** (June 2024 - September 2024)
+  - Advisor: Zifei Shan (Tencent WXG).
+- **Research Intern, Shanghai AI Lab** (June 2023 - December 2023)
+  - Advisor: Prof. Yu Cheng (Shanghai AI Lab).
+
+## Skills and Research Interests
+
+- Natural Language Processing
+- Machine Learning
+- LLM Reasoning and Reinforcement Learning
+- Hallucination in Vision-Language Models (VLM)
+- LLM Truthfulness and Interpretability
+
+## Honors and Awards
+
+- Zhiyuan Honor Scholarship, awarded by Shanghai Jiao Tong University.
+
+## Publications
+
+{% assign cv_publications = site.publications | sort: 'display_order' %}
+<ol>
+{% for publication in cv_publications %}
+  <li>{{ publication.citation | markdownify }}</li>
+{% endfor %}
+</ol>
+
+## Contact
+
+- Email: [jliugi@connect.ust.hk](mailto:jliugi@connect.ust.hk)
+- GitHub: [Vicent0205](https://github.com/Vicent0205)
+- Google Scholar: [Profile](https://scholar.google.com/citations?hl=en&user=tbK9jl4AAAAJ&view_op=list_works&sortby=pubdate)
+- X (Twitter): [@junteng88716710](https://twitter.com/junteng88716710)
